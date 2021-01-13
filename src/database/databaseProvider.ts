@@ -2,7 +2,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 
 import { ConfigModule, ConfigService } from '../config';
 
-export const databaseProvider = MongooseModule.forRootAsync({
+export const DatabaseProvider = MongooseModule.forRootAsync({
   imports: [ConfigModule],
   useFactory: async (config: ConfigService) => ({
     uri: config.mongoUrl,

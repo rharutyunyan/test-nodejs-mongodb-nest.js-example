@@ -18,8 +18,4 @@ export const UserViewSchema = new Schema(
   { collection: 'UserView' },
 ) as any;
 
-export const userViewModel = connection.model<UserViewDocument>(
-  USER_VIEW_MODEL,
-  UserViewSchema,
-  'UserView',
-);
+connection.model<UserViewDocument>(USER_VIEW_MODEL, UserViewSchema, 'UserView');
